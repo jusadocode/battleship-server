@@ -21,13 +21,25 @@ export interface GameState {
 
 export interface ShootRequest {
   gameId: string;
-  x: number;
-  y: number;
+  coordinates: {
+    x: number;
+    y: number;
+  };
 }
 
 export interface ShotResponse {
   hit: boolean;
   shipDestroyed: Ship | null;
+}
+
+export interface EndGameRequest {
+  gameId: string;
+}
+
+export interface EndGameResponse {
+  coordinateMap: { [key: string]: string };
+  hitsCount: number;
+  bulletsCount: number;
 }
 
 export interface ErrorResponse {
