@@ -19,7 +19,6 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("../dist"));
 
 const activeGames: Map<string, GameState> = new Map();
 
@@ -35,6 +34,7 @@ app.post(
 
     if (!coordinateMap || !shipMap) {
       res.status(400).json({ error: "Error generating ship placements" });
+      return;
     }
 
     const gameState: GameState = {
@@ -52,6 +52,7 @@ app.post(
 
     console.log(`Game initiated, game ID: ${gameId}`);
     res.status(200).json(response);
+    return;
   }
 );
 
