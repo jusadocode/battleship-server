@@ -11,26 +11,25 @@ This project contains the backend for a Battleship game.
 1. **Clone the repository:**
 
 ```
-   git clone <repository_url>
-
+git clone https://github.com/jusadocode/battleship-server.git
 ```
 
 2. **Navigate to the project directory:**
 
-```cd battleship-server
-
+```
+cd battleship-server
 ```
 
 3. **Install dependencies:**
 
-```npm install
-
+```
+npm install
 ```
 
 4. **Start the server project**
 
-Run the build command and the server will start listening for incoming requests:
+Run the start command and the server will build and start listening for incoming requests:
 
-```npm run start
-
+```
+npm run start
 ```
